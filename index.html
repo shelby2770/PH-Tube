@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora's Tube</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary_clr': '#FF1F3D',
+                        'sec_clr': '#25252533',
+                        'third_clr': '#25252526'
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="p-8">
+    <nav>
+        <div class="navbar bg-base-100 flex flex-col md:flex-row gap-4">
+            <div class="navbar-start hidden md:flex">
+                <img src="./Logo.png" alt="">
+            </div>
+            <div class="navbar-center md:hidden">
+                <img src="./Logo.png" alt="">
+            </div>
+
+            <div class="navbar-center flex">
+                <button class="btn btn-sm rounded-md bg-sec_clr text-black normal-case" onclick="sort_view()">Sort by
+                    view</button>
+            </div>
+
+            <div class="navbar-center md:hidden">
+                <button class="btn btn-sm btn-outline rounded-md bg-primary_clr text-white" onclick="
+                    location.href='./blog.html'">Blog</button>
+            </div>
+
+            <div class=" navbar-end hidden md:flex">
+                <button class="btn btn-sm btn-outline rounded-md bg-primary_clr text-white"
+                    onclick="location.href='./blog.html'">Blog</button>
+            </div>
+        </div>
+    </nav>
+    <div class="mt-2 h-[0.1px] w-full bg-gray-300"></div>
+
+    <main>
+        <div class="my-8 flex flex-row gap-4 justify-center">
+            <div id="button_container1" class="" onclick="button_changer(this)">
+                <button class="btn btn-sm btn-outline rounded-md bg-third_clr text-black normal-case">All</button>
+            </div>
+
+            <div id="button_container2" class="" onclick="button_changer(this)">
+                <button class="btn btn-sm btn-outline rounded-md bg-third_clr text-black normal-case">Music</button>
+            </div>
+
+            <div id="button_container3" class="" onclick="button_changer(this)">
+                <button class="btn btn-sm btn-outline rounded-md bg-third_clr text-black normal-case">Comedy</button>
+            </div>
+
+            <div id="button_container4" class="" onclick="button_changer(this)">
+                <button class="btn btn-sm btn-outline rounded-md bg-third_clr text-black normal-case">Drawing</button>
+            </div>
+        </div>
+
+        <div id="contents_container" class="flex flex-col justify-center items-center text-center">
+            <div id="all_contents" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./script.js"></script>
+</body>
