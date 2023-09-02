@@ -37,7 +37,7 @@ const add_item = async (item, isModify = false) => {
 
   let container = document.getElementById("contents_container");
   container.innerHTML = `
-  <div id="all_contents" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div id="all_contents" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
   </div>
   `;
   let data_array = data.data;
